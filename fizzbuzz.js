@@ -1,22 +1,18 @@
 
 
-function fizzBuzz() {
-  let currVal = 1;
-  return function getValidValue() {
-    let correctVal;
-    currVal = currVal + 1;
-    if (currVal % 3 === 0 && currVal % 5 === 0) {
-      correctVal = 'fizzbuzz'
-    } else if (currVal % 5 === 0) {
-      correctVal = 'buzz'
-    } else if (currVal % 3 === 0) {
-      correctVal = 'fizz'
-    } else {
-      correctVal = currVal;
-    }
-    return correctVal;
+function fizzBuzz(currVal) {
+  let correctVal;
+  if (currVal % 3 === 0 && currVal % 5 === 0) {
+    correctVal = 'fizzbuzz'
+  } else if (currVal % 5 === 0) {
+    correctVal = 'buzz'
+  } else if (currVal % 3 === 0) {
+    correctVal = 'fizz'
+  } else {
+    correctVal = `${currVal}`;
   }
-}    
+  return correctVal;
+}
 
 module.exports = {
   fizzBuzz
